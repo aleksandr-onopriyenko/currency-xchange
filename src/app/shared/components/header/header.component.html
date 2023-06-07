@@ -1,0 +1,9 @@
+<header class="header">
+  <h1 class="header-title">Current exchange rate against the UAH</h1>
+  <div class="header-rate">
+    <div class="header-rate__item" *ngFor="let currency of currencies">
+      <span>{{ currency.rate.toFixed(3) }}</span>
+      <img [src]="currency.icon" />
+    </div>
+  </div>
+</header>

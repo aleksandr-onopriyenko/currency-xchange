@@ -1,0 +1,49 @@
+<ng-container
+  *ngIf="{
+    convertedValues: convertedValues$ | async,
+    options: selectOptions$ | async
+  } as currency"
+>
+  <ng-container
+    *ngIf="
+      !!currency && !!currency.options && !!currency.convertedValues;
+      else loader
+    "
+  >
+    <form>
+      <div>
+        <div class="mat-body-2">Amount</div>
+        <app-input
+          name="amount1"
+          [value]="currency.convertedValues.amount1"
+          (on-change)="convertedService.handleAmount1Change($event)"
+        />
+        <app-select
+          [options]="currency.options"
+          [value]="getCurrencyWithIcon('USD')"
+          (on-change)="convertedService.handleCurrency1Change($event)"
+        />
+      </div>
+      <div>
+        <mat-icon fontIcon="compare_arrows" color="primary"></mat-icon>
+      </div>
+      <div>
+        <div class="mat-body-2">Converted To</div>
+        <app-input
+          name="amount2"
+          [value]="currency.convertedValues.amount2"
+          (on-change)="convertedService.handleAmount2Change($event)"
+        />
+        <app-select
+          [options]="currency.options"
+          [value]="getCurrencyWithIcon('UAH')"
+          (on-change)="convertedService.handleCurrency2Change($event)"
+        />
+      </div>
+    </form>
+  </ng-container>
+</ng-container>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

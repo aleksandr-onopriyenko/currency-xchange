@@ -2,8 +2,7 @@
 
 A simple currency converter application built with Angular.
 
-<a href="./docs/screenshots/desktop.png"><img src="./docs/screenshots/
-desktop.png" /></a>
+![Preview](./docs/screenshots/desktop.png)
 
 ## Demo
 

@@ -1,0 +1,12 @@
+:host {
+  background: linear-gradient(to right top, #551633, #121421);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  app-header {
+    width: 100%;
+  }
+}

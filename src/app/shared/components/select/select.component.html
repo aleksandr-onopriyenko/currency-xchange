@@ -1,0 +1,23 @@
+<ng-container *ngIf="formControl.value">
+  <mat-form-field appearance="outline">
+    <mat-select
+      [formControl]="formControl"
+      [compareWith]="compareObjects"
+      (selectionChange)="change.emit(formControl.value.currencyCode)"
+    >
+      <mat-select-trigger
+        class="option"
+        [style]="iconToBg(formControl.value.icon)"
+        >{{ formControl.value.currencyCode }}</mat-select-trigger
+      >
+      <mat-option
+        class="option"
+        [value]="option"
+        *ngFor="let option of options"
+        [style]="iconToBg(option.icon)"
+      >
+        {{ option.currencyCode }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-container>

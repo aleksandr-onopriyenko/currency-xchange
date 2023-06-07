@@ -1,0 +1,10 @@
+<mat-form-field appearance="outline">
+  <input
+    matInput
+    #input
+    type="number"
+    [name]="name"
+    [(ngModel)]="value"
+    (ngModelChange)="change.emit(input.value)"
+  />
+</mat-form-field>

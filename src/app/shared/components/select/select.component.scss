@@ -1,0 +1,37 @@
+.option,
+.mat-mdc-option:hover:not(.mdc-list-item--disabled),
+.mat-mdc-option:focus.mdc-list-item,
+.mat-mdc-option.mat-mdc-option-active.mdc-list-item,
+.mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(
+    .mdc-list-item--disabled
+  ) {
+  padding-inline-end: 4rem;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+  display: flex;
+}
+
+select {
+  width: 300px;
+  height: 50px;
+  position: relative;
+
+  .mat-mdc-option:hover:not(.mdc-list-item--disabled),
+  .mat-mdc-option:focus.mdc-list-item,
+  .mat-mdc-option.mat-mdc-option-active.mdc-list-item,
+  .mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(
+      .mdc-list-item--disabled,
+      .mat-mdc-option[_ngcontent-ng-c475167646]:hover:not(
+          .mdc-list-item--disabled
+        ),
+      .mat-mdc-option[_ngcontent-ng-c475167646]:focus.mdc-list-item,
+      .mat-mdc-option.mat-mdc-option-active.mdc-list-item[_ngcontent-ng-c475167646],
+      .mat-mdc-option.mdc-list-item--selected[_ngcontent-ng-c475167646]:not(
+          .mat-mdc-option-multiple
+        ):not(.mdc-list-item--disabled)
+    ) {
+    background: none;
+  }
+}
